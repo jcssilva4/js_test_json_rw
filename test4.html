@@ -1,0 +1,48 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Enterprise workers</title>
+		<script type="text/javascript">
+			let db_created = 0
+			if (db_created = 1){
+				var mysql = require('mysql');
+				var con = mysql.createConnection({
+				  host: "localhost",
+				  user: "yourusername",
+				  password: "yourpassword"
+				});
+
+				con.connect(function(err) {
+				  if (err) throw err;
+				  console.log("Connected!");
+				  con.query("CREATE DATABASE mydb", function (err, result) {
+				    if (err) throw err;
+				    console.log("Database created");
+				  });
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<!--https://www.w3schools.com/html/html_forms.asp-->
+		<center>
+		<div class="main_div">
+		<a href="test4.html">Home</a>
+		<a href="test4_list.html">List workers</a>
+		<a href="test4_register.html">Register a new worker</a>
+		</div>
+		</center>
+		<div class = "sec_div">
+		<h1 class="home_header">Brief description of this website</h1>
+		<p class="home_p">This website lists and registers the enterprise workers. text
+		text text text text text text text text text text text text
+		text text text text text text tet text text text text text text text tet text
+		text text text text text text tet texttext text text text text text tet text
+		text text text text text text tet texttext text text text text text tet text
+		text text text text text text tet texttext text text text text text tet text
+		text text text text text text tet texttext text text text text text tet text
+		</p>
+		</div>
+		<link rel="stylesheet" type="text/css" href="test4_style.css">
+	</body>
+	</html>
